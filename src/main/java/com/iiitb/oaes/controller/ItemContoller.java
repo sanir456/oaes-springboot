@@ -17,7 +17,7 @@ public class ItemContoller {
     @Autowired
     private ItemService itemService;
 
-    @RequestMapping(value = "/getItem", method = RequestMethod.GET)
+    @RequestMapping(value = "/getItem", method = RequestMethod.POST)
     public ResponseEntity<?> getItem(@RequestBody Map<String,String> payload)
     {
         Item item = itemService.getItem(payload);
